@@ -1,0 +1,42 @@
+name: pilipala_harmonyos
+description: PiliPala HarmonyOS适配版本
+version: 1.0.25+1025
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  
+  # 鸿蒙特有依赖
+  harmonyos_flutter:
+    git:
+      url: https://github.com/harmonyos/flutter-harmonyos.git
+      ref: main
+  
+  # 原有依赖保持不变
+  get: ^4.6.5
+  dio: ^5.4.1
+  cached_network_image: ^3.3.0
+  # ... 其他依赖
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  
+  # 鸿蒙特有配置
+  harmonyos:
+    enable: true
+    api-level: 9
+    
+  assets:
+    - assets/
+    - assets/images/
+    - assets/images/logo/

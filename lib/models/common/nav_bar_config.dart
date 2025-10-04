@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../pages/dynamics/index.dart';
+import '../../pages/follow/index.dart';
 import '../../pages/home/index.dart';
 import '../../pages/media/index.dart';
 import '../../pages/rank/index.dart';
@@ -50,6 +51,20 @@ List defaultNavigationBars = [
   },
   {
     'id': 3,
+    'icon': const Icon(
+      Icons.favorite_outline,
+      size: 21,
+    ),
+    'selectIcon': const Icon(
+      Icons.favorite,
+      size: 21,
+    ),
+    'label': "关注",
+    'count': 0,
+    'page': const FollowPage(),
+  },
+  {
+    'id': 4,
     'icon': const Icon(
       Icons.video_collection_outlined,
       size: 20,
